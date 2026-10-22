@@ -1,0 +1,86 @@
+openapi: 3.1.0
+info:
+  title: LatchBio API
+  version: '2026-10-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-22: 3 operation(s) read from 3 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; LatchBio has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 0
+    pages-with-code: 3
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://wiki.latch.bio/workflows/sdk/api/storing-and-using-secrets.md
+  - https://wiki.latch.bio/workflows/sdk/snakemake-v2/tutorial.md
+  - https://wiki.latch.bio/workflows/sdk/python/workflow-environment/overview.md
+paths:
+  /conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh:
+    get:
+      operationId: get_conda_forge_miniforge_releases_latest_download_Miniforge3_Linux_x86_64_sh
+      tags:
+      - Conda Forge
+      summary: GET /conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+      x-source: https://wiki.latch.bio/workflows/sdk/snakemake-v2/tutorial.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl git &&  >     curl  >         --location  >         --fail  >         --remote-name  >         https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+          &&  >     `# Docs for -b and -p flags: https://docs.anaconda.com/anaconda/install/silent-mode/#linux-macos`  >     bash Miniforge3-Linux-x86_64.sh
+          -b -p /opt/conda -u &&  >     rm Miniforge3-Linux-x86_64.sh
+
+          '
+  /fake/endpoint:
+    post:
+      operationId: post_fake_endpoint
+      tags:
+      - Fake
+      summary: POST /fake/endpoint
+      x-source: https://wiki.latch.bio/workflows/sdk/api/storing-and-using-secrets.md
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: python
+        snippet: "requests.post(\n        \"https://fake.example.com/fake/endpoint\",\n        headers={\"Authorization\": f\"Bearer {token}\"\
+          }\n        json={\n            \"fake_data\": fake_data\n        }\n    )"
+  /r-lib/rig/releases/download/latest/rig-linux-latest.tar.gz:
+    get:
+      operationId: get_r_lib_rig_releases_download_latest_rig_linux_latest_tar_gz
+      tags:
+      - R Lib
+      summary: GET /r-lib/rig/releases/download/latest/rig-linux-latest.tar.gz
+      x-source: https://wiki.latch.bio/workflows/sdk/python/workflow-environment/overview.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl  >         --location  >         --fail  >         --remote-name  >         https://github.com/r-lib/rig/releases/download/latest/rig-linux-latest.tar.gz
+          &&  >     tar  >         --extract  >         --gunzip  >         --file rig-linux-latest.tar.gz  >         --directory /usr/local/
+          &&  >     rm rig-linux-latest.tar.gz
+
+          >
+
+          > # Install R
+
+          > run rig add release # Change to any R version
+
+          >
+
+          > # In'
+tags:
+- name: Conda Forge
+- name: Fake
+- name: R Lib

@@ -1,0 +1,8 @@
+generated: '2026-10-22'
+method: probed
+source: https://wiki.latch.bio/.well-known/mcp/server-card.json
+deployment:
+  mode: remote
+  endpoint: https://wiki.latch.bio/mcp
+  auth: none
+  verified: probed

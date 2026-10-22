@@ -1,25 +1,96 @@
 aid: latchbio
+
 name: LatchBio
-description: 'LatchBio is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by coatue) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://latch.bio/_next/static/media/open_graph.0fb8911c.png
+
+description: 'LatchBio provides a platform that harmonizes wet and dry lab workflows, enabling high‑throughput biological experiments, data capture, and analysis. By integrating laboratory automation, assay management, and machine‑learning driven insights, LatchBio helps researchers accelerate discovery and improve reproducibility across biotech and pharmaceutical research.'
+
 url: https://raw.githubusercontent.com/api-evangelist/latchbio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
+- Biotechnology
+- LabAutomation
+- DataAnalytics
+- MachineLearning
+- Platform
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- coatue
+
 common:
+- type: Spectral
+  url: rules/latchbio-rules.yml
+- type: Vocabulary
+  url: vocabulary/latchbio-vocabulary.yml
+- type: CLI
+  url: cli/latchbio-cli.yml
+- type: Conformance
+  url: conformance/latchbio-conformance.yml
+- type: LLMsTxt
+  url: llms/latchbio-llms.txt
+- type: AgentCard
+  url: a2a/latchbio-a2a.yml
+- type: MCPServer
+  url: mcp/latchbio-mcp.yml
+- type: WellKnown
+  url: well-known/latchbio-well-known.yml
+- type: Hosts
+  url: hosts/latchbio-hosts.yml
+- type: Vendors
+  url: vendors/latchbio-vendors.yml
+- type: Security
+  url: https://latch.bio/security
+- type: Blog
+  url: https://blog.latch.bio/
+- type: GettingStarted
+  url: https://wiki.latch.bio/start/quickstart
+- type: DomainSecurity
+  url: security/latchbio-domain-security.yml
 - type: Website
   url: https://latch.bio/
+- type: Documentation
+  url: https://docs.latch.bio/
+- type: APIReference
+  url: https://docs.latch.bio/
+- type: TermsOfService
+  url: https://wiki.latch.bio/wiki/resources/terms-of-service
+- type: PrivacyPolicy
+  url: https://wiki.latch.bio/wiki/resources/privacy-policy
+
+apis:
+- aid: latchbio:latchbio-api
+  name: LatchBio API
+  description: 'LatchBio API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-22); not
+    the provider''s own document.'
+  humanURL: https://wiki.latch.bio/workflows/sdk/api/storing-and-using-secrets.md
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/latchbio-openapi-generated.yml
+    x-provenance: generated
+
+x-backed-by:
+- coatue
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

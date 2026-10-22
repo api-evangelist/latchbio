@@ -1,0 +1,182 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 15
+  own: 7
+  other_domain: 6
+  platform: 2
+  roles:
+  - api
+  - docs
+  - marketing
+  - other
+  - status
+  - website
+hosts:
+- host: academic.oup.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: oup.com
+  role: other
+  relation: other-domain
+- host: api.latch.bio
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: latch.bio
+  role: api
+  relation: own
+- host: blog.latch.bio
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: latch.bio
+  role: marketing
+  relation: own
+- host: console.latch.bio
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: latch.bio
+  role: other
+  relation: own
+- host: crispor.org
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: crispor.org
+  role: other
+  relation: other-domain
+- host: docs.latch.bio
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Documentation
+  - APIReference
+  serves:
+  - docs
+  registrable_domain: latch.bio
+  role: docs
+  relation: own
+- host: genomebiology.biomedcentral.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: biomedcentral.com
+  role: other
+  relation: other-domain
+- host: latch.bio
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Security
+  - Website
+  serves:
+  - docs
+  registrable_domain: latch.bio
+  role: website
+  relation: own
+- host: latch.wiki
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: latch.wiki
+  role: other
+  relation: other-domain
+- host: latchbio.notion.site
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: notion.site
+  role: other
+  relation: platform
+- host: latchbio.substack.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: substack.com
+  role: other
+  relation: platform
+- host: mintlify.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: mintlify.com
+  role: other
+  relation: other-domain
+- host: pubmed.ncbi.nlm.nih.gov
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: nih.gov
+  role: other
+  relation: other-domain
+- host: status.latch.bio
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: latch.bio
+  role: status
+  relation: own
+- host: wiki.latch.bio
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  - vendor-detect
+  types:
+  - GettingStarted
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - hosting
+  vendor: vercel
+  registrable_domain: latch.bio
+  role: docs
+  relation: own

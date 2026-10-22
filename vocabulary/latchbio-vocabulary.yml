@@ -1,0 +1,26 @@
+generated: '2026-10-22'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/latchbio-openapi-generated.yml
+vocabulary:
+  name: LatchBio Domain Vocabulary
+  description: 'Terms declared by LatchBio''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-22'
+  terms:
+  - term: Conda Forge
+    definition: 'Resource group in the contract; its operation GET /conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh:
+      GET /conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/latchbio-openapi-generated.yml
+  - term: Fake
+    definition: 'Resource group in the contract; its operation POST /fake/endpoint: POST /fake/endpoint'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/latchbio-openapi-generated.yml
+  - term: R Lib
+    definition: 'Resource group in the contract; its operation GET /r-lib/rig/releases/download/latest/rig-linux-latest.tar.gz: GET /r-lib/rig/releases/download/latest/rig-linux-latest.tar.gz'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/latchbio-openapi-generated.yml

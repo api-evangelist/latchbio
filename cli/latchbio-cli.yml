@@ -1,0 +1,35 @@
+generated: '2026-10-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://wiki.latch.bio/workflows/sdk/python/overview.md
+sources:
+- https://wiki.latch.bio/workflows/sdk/python/overview.md
+- https://wiki.latch.bio/workflows/sdk/python/quick-start.md
+- https://wiki.latch.bio/workflows/sdk/python/authorizing-your-own-workflow.md
+- https://wiki.latch.bio/workflows/sdk/python/workflow-environment/overview.md
+install:
+- method: pip
+  command: python3 -m pip install latch
+commands:
+- group: login
+  commands:
+  - latch login
+- group: init
+  commands:
+  - latch init covid-wf --template subprocess
+  - latch init covid-wf --template subprocess
+- group: register
+  commands:
+  - latch register --yes --open covid-wf
+  - latch register covid-wf
+- group: dockerfile
+  commands:
+  - latch dockerfile [OPTIONS] OUTPUT_DIRECTORY
+  - latch dockerfile -p requirements.txt .
+  - latch dockerfile -i setup.py .
+  - latch dockerfile -c environment.yaml .
+  - latch dockerfile -r environment.R .
+  - latch dockerfile -a system-requirements.txt .
+  - latch dockerfile -d .env .
+binary: latch
+docs: https://wiki.latch.bio/workflows/sdk/python/overview.md
